@@ -16,6 +16,7 @@
 import Topnav from "../components/Topnav.vue";
 export default {
   name: "Home",
+  data() {},
   components: {
     Topnav,
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo">Logo</div>
+    <div class="logo" @click="toogleMenu">Logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -9,8 +9,16 @@
 </template>
 
 <script lang="ts">
+import { inject, Ref } from "vue";
 export default {
   name: "Topnav",
+  setup() {
+    const menuVisible = inject<Ref<boolean>>("xxx"); //将类型设置成布尔值
+    const toogleMenu = () => {
+      menuVisible.value = !menuVisible.value;
+    };
+    return { toogleMenu };
+  },
 };
 </script>
 
