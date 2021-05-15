@@ -1,15 +1,15 @@
 <template>
-  <div>hi</div>
-  <Sean />
+  <div>
+    导航栏 | <router-link to="/">Sean</router-link> |
+    <router-link to="/xxx">Sean2</router-link>
+  </div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-import Sean from "./components/Sean.vue";
-
 export default {
   name: "App",
-  components: {
-    Sean,
-  },
+  components: {},
 };
 </script>
