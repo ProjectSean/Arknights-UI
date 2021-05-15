@@ -1,7 +1,7 @@
 <template>
   <div>
-    导航栏 | <router-link to="/">Sean</router-link> |
-    <router-link to="/xxx">Sean2</router-link>
+    导航栏 | <router-link to="/">首页</router-link> |
+    <router-link to="/doc">文档</router-link>
   </div>
   <hr />
   <router-view />
