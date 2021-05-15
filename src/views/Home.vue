@@ -3,10 +3,10 @@
     <Topnav />
     <div class="banner">
       <h1>Efficient UI</h1>
-      <h2>一个Vue的框架</h2>
+      <h2>一个Vue的UI框架</h2>
       <p class="actions">
-        <a href="">GitHub</a>
-        <a href="">开始</a>
+        <a href="https://github.com"> GitHub</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
@@ -30,8 +30,7 @@ export default {
   align-items: center;
   flex-direction: column;
   background: lightgreen;
-  >,
-  actions {
+  > .actions {
     padding: 8px 0;
     a {
       margin: 0 8px;
