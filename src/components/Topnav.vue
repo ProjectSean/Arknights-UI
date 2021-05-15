@@ -1,10 +1,11 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toogleMenu">Logo</div>
+    <div class="logo" @click="toggleMenu">Logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleAside"></span>
   </div>
 </template>
 
@@ -13,11 +14,11 @@ import { inject, Ref } from "vue";
 export default {
   name: "Topnav",
   setup() {
-    const menuVisible = inject<Ref<boolean>>("xxx"); //将类型设置成布尔值
-    const toogleMenu = () => {
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); //将类型设置成布尔值
+    const toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
     };
-    return { toogleMenu };
+    return { toggleMenu };
   },
 };
 </script>
@@ -29,6 +30,8 @@ export default {
   padding: 16px;
   position: relative;
   z-index: 10;
+  justify-content: center;
+  align-items: center;
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -39,6 +42,16 @@ export default {
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+    }
+  }
+  > .toggleMenu {
+  }
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
     }
   }
 }

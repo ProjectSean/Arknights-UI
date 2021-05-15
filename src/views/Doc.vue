@@ -30,7 +30,7 @@ import Topnav from "../components/Topnav.vue";
 export default {
   name: "Doc",
   setup() {
-    const menuVisible = inject<Ref<boolean>>("xxx");
+    const menuVisible = inject<Ref<boolean>>("menuVisible");
     console.log("doc aside 获取的 menuVisible为：" + menuVisible.value);
     return { menuVisible };
   },
