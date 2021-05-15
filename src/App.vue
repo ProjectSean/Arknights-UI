@@ -7,7 +7,10 @@ import { provide, ref } from "vue";
 export default {
   name: "App",
   setup() {
-    const menuVisible = ref(false);
+    // 获取页面宽度
+    const bwidth = document.documentElement.clientWidth;
+    // 如果小于500则是移动端，值应该为500，则菜单默认不显示
+    const menuVisible = ref(bwidth <= 500 ? false : true);
     provide("menuVisible", menuVisible);
   },
 };

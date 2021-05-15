@@ -1,11 +1,11 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMenu">Logo</div>
+    <div class="logo">Logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggleAside"></span>
+    <span class="toggleMenu" @click="toggleMenu"></span>
   </div>
 </template>
 
@@ -45,6 +45,15 @@ export default {
     }
   }
   > .toggleMenu {
+    // display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: red;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
   }
   @media (max-width: 500px) {
     > .menu {
@@ -52,6 +61,9 @@ export default {
     }
     > .logo {
       margin: 0 auto;
+    }
+    > .toggleMenu {
+      display: inline-block;
     }
   }
 }
