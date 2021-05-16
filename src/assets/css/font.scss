@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Bender';
+  src: url('../../media/Bender/Bender-Light.woff') format('woff'), 
+      url('../../media/Bender/Bender-Light.woff2') format('woff2');     
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.consfont {
+  font-family:'Bender'
+}
