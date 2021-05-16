@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>Switch的文档</div>
 </template>
 
 <script>
