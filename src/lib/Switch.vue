@@ -4,7 +4,6 @@
     <p v-show="!value" class="off consfont">OFF</p>
     <span></span>
   </button>
-  <p>ON</p>
 </template>
 
 <script lang="ts">
@@ -47,8 +46,8 @@ span {
   position: absolute;
   top: -1.5px;
   left: -1px;
-  height: calc(#{$h2} - 1px);
-  width: calc(#{$h2} - 1px);
+  height: calc(#{$h2} - 1.5px);
+  width: calc(#{$h2} - 1.5px);
   background-color: #fff;
   border-radius: $h2 / 2;
   box-shadow: -2px 2px 2px rgb(85, 85, 85, 0.4);

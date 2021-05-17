@@ -1,6 +1,8 @@
 import { createWebHashHistory, createRouter } from 'vue-router'
+
 import Home from '../views/Home.vue'
 import Doc from '../views/Doc.vue'
+
 import Docdemo from '../components/Docdemo.vue'
 import Switch from '../components/SwitchDemo.vue'
 import Dialog from '../components/DialogDemo.vue'
