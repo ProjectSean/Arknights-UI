@@ -6,7 +6,7 @@
   >
     <p v-show="value" class="ark-consfont">ON</p>
     <p v-show="!value" class="off ark-consfont">OFF</p>
-    <span></span>
+    <span class="ark-switch-content"></span>
   </button>
 </template>
 
@@ -34,19 +34,20 @@ $h2: $h + 2px;
   background: rgb(85, 85, 85);
   border-radius: $h/2;
   position: relative;
+  > p {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-size: 12px;
+  }
 }
-p {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  transform: translate(0, -50%);
-  color: #fff;
-  font-size: 12px;
-}
+
 p.off {
   right: -12px;
 }
-span {
+span.ark-switch-content {
   position: absolute;
   top: -1.5px;
   left: -1px;

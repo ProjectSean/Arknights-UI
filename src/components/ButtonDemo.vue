@@ -2,10 +2,10 @@
   <div>Button实例</div>
   <h1>示例1</h1>
   <div>
-    <Button>你好</Button>
-    <Button theme="button">你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>
+    <Button>确认</Button>
+    <Button theme="button">确认</Button>
+    <Button theme="link">跳转</Button>
+    <Button theme="text">文字按钮</Button>
   </div>
 </template>
 
