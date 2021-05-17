@@ -1,7 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import './lib/ark.scss'
 import './index.scss'
 import './assets/css/font.scss'
+import { createApp } from 'vue'
+import App from './App.vue'
 import { router } from './network/router'
 
 

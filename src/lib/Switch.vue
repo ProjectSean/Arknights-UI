@@ -1,7 +1,11 @@
 <template>
-  <button :class="{ checked: value }" @click="toggleButton">
-    <p v-show="value" class="consfont">ON</p>
-    <p v-show="!value" class="off consfont">OFF</p>
+  <button
+    class="ark-switch"
+    :class="{ 'ark-checked': value }"
+    @click="toggleButton"
+  >
+    <p v-show="value" class="ark-consfont">ON</p>
+    <p v-show="!value" class="off ark-consfont">OFF</p>
     <span></span>
   </button>
 </template>
@@ -20,10 +24,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h + 2px;
-button {
+.ark-switch {
   height: $h;
   width: $h * 2.5;
   border: none;
@@ -53,13 +57,13 @@ span {
   box-shadow: -2px 2px 2px rgb(85, 85, 85, 0.4);
   transition: left 250ms;
 }
-button.checked {
+.ark-switch.ark-checked {
   background-color: rgb(227, 99, 47);
 }
-button.checked > span {
+.ark-switch.ark-checked > span {
   left: calc(100% - #{$h2} + 2px);
 }
-button:focus {
+.ark-switch:focus {
   outline: none;
 }
 </style>

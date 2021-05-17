@@ -48,7 +48,6 @@ export default {
     }
   }
   > .toggleMenu {
-    // display: inline-block;
     width: 24px;
     height: 24px;
     background: red;
