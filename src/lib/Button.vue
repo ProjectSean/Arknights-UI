@@ -2,16 +2,17 @@
   <button
     class="ark-button"
     :class="getClasses"
+    :disabled="disabled"
     @mousedown="onMouseDown"
     @mouseup="onMouseUp"
   >
+    <span v-if="loading" class="ark-loadingIndicator"></span>
     <div><slot /></div>
-    <span></span>
+    <span :class="{ 'ark-span-arrow': theme === 'link' }"></span>
   </button>
 </template>
 
 <script lang="ts">
-import { computed } from "vue";
 export default {
   props: {
     theme: {
@@ -22,16 +23,20 @@ export default {
       type: String,
       default: "normal",
     },
+    level: {
+      type: String,
+      default: "normal",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
   },
-  setup(props, context) {
-    // const { theme } = props;
-    // const classes = computed(() => {
-    //   return [
-    //   `ark-theme-${theme}`,
-    //   { 'ark-theme-button-active': context.attrs.mousedownflag },
-    // ]
-    // });
-  },
+  setup() {},
   data() {
     return {
       mousedownflag: false,
@@ -99,6 +104,18 @@ button.ark-button {
   }
   &.ark-size-big {
     min-width: 136px;
+    > .ark-loadingIndicator {
+      width: 20px;
+      height: 20px;
+      border-radius: 12px;
+    }
+  }
+  &.ark-size-small {
+    > .ark-loadingIndicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 6px;
+    }
   }
   &.ark-theme-button {
     background-image: linear-gradient(180deg, $button-bg-sta, $button-bg-end);
@@ -123,7 +140,7 @@ button.ark-button {
     background-color: $link-bg;
     background-image: none;
     border: 1px solid $link-border;
-    > span {
+    > .ark-span-arrow {
       position: absolute;
       right: 8.8%;
       top: calc(50% - 2px);
@@ -134,7 +151,7 @@ button.ark-button {
     &.ark-theme-button-active {
       background-color: $link-bg-active;
       color: $link-text-active;
-      > span {
+      > .ark-span-arrowspan {
         border-left: 5px solid $link-text-active;
       }
     }
@@ -142,7 +159,7 @@ button.ark-button {
       font-size: 24px;
       height: $h + 16px;
       padding: 0 32px;
-      > span {
+      > .ark-span-arrow {
         top: calc(50% - 2.5px);
         border-top: 6px solid transparent;
         border-bottom: 6px solid transparent;
@@ -153,7 +170,7 @@ button.ark-button {
       font-size: 8px;
       height: $h - 8px;
       padding: 0 16px;
-      > span {
+      > .ark-span-arrow {
         top: calc(50% - 1.5px);
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
@@ -190,15 +207,38 @@ button.ark-button {
       height: $h + 16px;
       padding: 0 32px;
     }
+    > .ark-loadingIndicator {
+      border-color: $text-color-gr $text-color-gr $text-color-gr transparent;
+    }
     &.ark-size-small {
       font-size: 8px;
       height: $h - 8px;
       padding: 0 16px;
     }
+
     &:hover::after,
     &:hover::before {
       height: 50%;
     }
+  }
+  > .ark-loadingIndicator {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: #fff #fff #fff transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: ark-spin 1s infinite linear;
+  }
+}
+@keyframes ark-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 </style>
