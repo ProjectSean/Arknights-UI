@@ -1,19 +1,19 @@
 <template>
-  <div :size="size">
-    <!-- 让这个元素继承 -->
-    <button v-bind="rest">
-      <slot />
-    </button>
-  </div>
+  <button class="an-button" :class="`theme-${theme}`">
+    <slot />
+  </button>
 </template>
 
 <script lang="ts">
 export default {
-  // 不要让外层元素继承方法
-  inheritAttrs: false,
-  setup(props, context) {
-    const { size, ...rest } = context.attrs;
-    return { size, rest };
+  props: {
+    theme: {
+      type: String,
+      default: "button",
+    },
+  },
+  setup() {
+    return {};
   },
 };
 </script>
