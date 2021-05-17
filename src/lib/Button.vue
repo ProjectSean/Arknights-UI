@@ -1,10 +1,7 @@
 <template>
   <button
     class="ark-button"
-    :class="[
-      `ark-theme-${theme}`,
-      { 'ark-theme-button-active': mousedownflag },
-    ]"
+    :class="getClasses"
     @mousedown="onMouseDown"
     @mouseup="onMouseUp"
   >
@@ -14,14 +11,27 @@
 </template>
 
 <script lang="ts">
+import { computed } from "vue";
 export default {
   props: {
     theme: {
       type: String,
       default: "button",
     },
+    size: {
+      type: String,
+      default: "normal",
+    },
   },
-  setup() {},
+  setup(props, context) {
+    // const { theme } = props;
+    // const classes = computed(() => {
+    //   return [
+    //   `ark-theme-${theme}`,
+    //   { 'ark-theme-button-active': context.attrs.mousedownflag },
+    // ]
+    // });
+  },
   data() {
     return {
       mousedownflag: false,
@@ -33,6 +43,15 @@ export default {
     },
     onMouseUp() {
       this.mousedownflag = false;
+    },
+  },
+  computed: {
+    getClasses() {
+      return [
+        `ark-theme-${this.theme}`,
+        `ark-size-${this.size}`,
+        { "ark-theme-button-active": this.mousedownflag },
+      ];
     },
   },
 };
@@ -69,7 +88,8 @@ button.ark-button {
   box-shadow: 0 1px 0 fade-out(#000, 0.95);
   font-weight: 700;
   & + & {
-    margin-left: 8px;
+    margin-left: 16px;
+    margin-bottom: 16px;
   }
   &:focus {
     outline: none;
@@ -77,11 +97,24 @@ button.ark-button {
   &::-moz-focus-inner {
     border: 0;
   }
+  &.ark-size-big {
+    min-width: 136px;
+  }
   &.ark-theme-button {
     background-image: linear-gradient(180deg, $button-bg-sta, $button-bg-end);
     &.ark-theme-button-active {
       background-image: none;
       background-color: $button-bg-active;
+    }
+    &.ark-size-big {
+      font-size: 24px;
+      height: $h + 16px;
+      padding: 0 32px;
+    }
+    &.ark-size-small {
+      font-size: 8px;
+      height: $h - 8px;
+      padding: 0 16px;
     }
   }
   &.ark-theme-link {
@@ -92,8 +125,8 @@ button.ark-button {
     border: 1px solid $link-border;
     > span {
       position: absolute;
-      right: 6px;
-      top: 12px;
+      right: 8.8%;
+      top: calc(50% - 2px);
       border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
       border-left: 5px solid $link-span;
@@ -105,11 +138,33 @@ button.ark-button {
         border-left: 5px solid $link-text-active;
       }
     }
+    &.ark-size-big {
+      font-size: 24px;
+      height: $h + 16px;
+      padding: 0 32px;
+      > span {
+        top: calc(50% - 2.5px);
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 8px solid $link-span;
+      }
+    }
+    &.ark-size-small {
+      font-size: 8px;
+      height: $h - 8px;
+      padding: 0 16px;
+      > span {
+        top: calc(50% - 1.5px);
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 4px solid $link-span;
+      }
+    }
   }
   &.ark-theme-text {
     position: relative;
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: $text-color-gr;
     &::before,
     &::after {
@@ -129,6 +184,16 @@ button.ark-button {
       bottom: 0;
       left: -1px;
       border-top: none;
+    }
+    &.ark-size-big {
+      font-size: 24px;
+      height: $h + 16px;
+      padding: 0 32px;
+    }
+    &.ark-size-small {
+      font-size: 8px;
+      height: $h - 8px;
+      padding: 0 16px;
     }
     &:hover::after,
     &:hover::before {
