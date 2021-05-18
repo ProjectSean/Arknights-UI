@@ -1,5 +1,6 @@
 <template>
   <div>Dialog实例</div>
+  <MessageBox />
 </template>
 
 <script lang="ts">
