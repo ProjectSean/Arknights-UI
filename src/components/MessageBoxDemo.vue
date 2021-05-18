@@ -6,7 +6,10 @@
     :closeOnClickOverlay="false"
     :ok="f1"
     :cancel="f2"
-  />
+  >
+    <div>我是第一</div>
+    <div>我是第二</div>
+  </MessageBox>
 </template>
 
 <script lang="ts">

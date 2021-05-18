@@ -4,12 +4,12 @@
     <div class="ark-mb-wrapper">
       <div class="ark-mb">
         <header>
-          标题
+          {{ title }}
           <span class="ark-mb-close" @click="close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot></slot>
+          <slot></slot>
         </main>
         <footer>
           <Button @click="ok">OK</Button>
@@ -24,6 +24,10 @@
 import Button from "./Button.vue";
 export default {
   props: {
+    title: {
+      type: String,
+      default: "标题",
+    },
     visible: {
       type: Boolean,
       default: false,
