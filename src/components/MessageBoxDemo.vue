@@ -7,8 +7,13 @@
     :ok="f1"
     :cancel="f2"
   >
-    <div>我是第一</div>
-    <div>我是第二</div>
+    <template v-slot:content>
+      <div>我是第一</div>
+      <div>我是第二</div>
+    </template>
+    <template v-slot:title>
+      <strong>标题</strong>
+    </template>
   </MessageBox>
 </template>
 
