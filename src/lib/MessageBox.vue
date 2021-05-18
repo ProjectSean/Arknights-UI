@@ -12,8 +12,8 @@
             <slot name="content"></slot>
           </main>
           <footer>
-            <Button @click="ok">OK</Button>
-            <Button @click="cancel">Cancel</Button>
+            <Button theme="danger" @click="cancel">Cancel</Button>
+            <Button @click="ok" style="min-width: 105px">OK</Button>
           </footer>
         </div>
       </div>
@@ -69,11 +69,16 @@ export default {
 $radius: 4px;
 $border-color: #d9d9d9;
 .ark-mb {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
-  border-radius: $radius;
+  // border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
-  min-width: 15em;
-  max-width: 90%;
+  width: 70vw;
+  min-height: 35vh;
+  max-width: 800px;
+
   &-overlay {
     position: fixed;
     top: 0;
@@ -91,7 +96,7 @@ $border-color: #d9d9d9;
     z-index: 11;
   }
   > header {
-    padding: 12px 16px;
+    padding-bottom: 12px;
     border-bottom: 1px solid $border-color;
     display: flex;
     align-items: center;
@@ -99,11 +104,15 @@ $border-color: #d9d9d9;
     font-size: 20px;
   }
   > main {
-    padding: 12px 16px;
+    flex-grow: 1;
+    padding: 12px 0;
   }
   > footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     border-top: 1px solid $border-color;
-    padding: 12px 16px;
+    padding-top: 12px;
     text-align: right;
   }
   &-close {

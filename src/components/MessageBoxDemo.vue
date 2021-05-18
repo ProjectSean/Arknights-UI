@@ -41,7 +41,7 @@ export default {
       openMessageBox({
         title: "标题",
         content: "你好",
-        closeOnClickOverlay: false,
+        closeOnClickOverlay: true,
         ok() {},
         cancel() {
           console.log("cancel");

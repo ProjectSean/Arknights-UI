@@ -54,7 +54,6 @@ export default {
       default: false,
     },
   },
-  setup() {},
   data() {
     return {
       mousedownflag: false,
@@ -114,7 +113,7 @@ button.ark-button {
   font-size: 16px;
   & + & {
     margin-left: 16px;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
   &:focus {
     outline: none;
