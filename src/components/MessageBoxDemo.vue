@@ -1,7 +1,12 @@
 <template>
   <h1>MessageBox示例</h1>
   <Button @click="toggle">切换</Button>
-  <MessageBox :visible="x" />
+  <MessageBox
+    v-model:visible="x"
+    :closeOnClickOverlay="false"
+    :ok="f1"
+    :cancel="f2"
+  />
 </template>
 
 <script lang="ts">
@@ -14,7 +19,13 @@ export default {
     const toggle = () => {
       x.value = !x.value;
     };
-    return { x, toggle };
+    const f1 = () => {
+      return false;
+    };
+    const f2 = () => {
+      return true;
+    };
+    return { x, toggle, f1, f2 };
   },
   components: {
     MessageBox,
