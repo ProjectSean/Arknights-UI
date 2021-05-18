@@ -2,10 +2,14 @@
   <div>Dialog实例</div>
 </template>
 
-<script>
+<script lang="ts">
+import MessageBox from "../lib/MessageBox.vue";
 export default {
   setup() {
     return {};
+  },
+  components: {
+    MessageBox,
   },
 };
 </script>

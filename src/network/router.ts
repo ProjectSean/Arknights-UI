@@ -5,7 +5,7 @@ import Doc from '../views/Doc.vue'
 
 import Docdemo from '../components/Docdemo.vue'
 import Switch from '../components/SwitchDemo.vue'
-import Dialog from '../components/DialogDemo.vue'
+import MessageBox from '../components/MessageBoxDemo.vue'
 import Tabs from '../components/TabsDemo.vue'
 import Button from '../components/ButtonDemo.vue'
 
@@ -34,8 +34,8 @@ export const router = createRouter({
           component: Button
         },
         {
-          path: 'dialog',
-          component: Dialog
+          path: 'messagebox',
+          component: MessageBox
         },
         {
           path: 'tabs',
