@@ -49,13 +49,11 @@ export default {
     };
     const ok = () => {
       if (props.ok && props.ok() !== false) {
-        console.log("ok");
         close();
       }
     };
     const cancel = () => {
       if (props.cancel?.() !== false) {
-        console.log("cancel");
         close();
       }
     };
