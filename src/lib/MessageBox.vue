@@ -1,23 +1,35 @@
 <template>
-  <div class="ark-mb-overlay"></div>
-  <div class="ark-mb-wrapper">
-    <div class="ark-mb">
-      <header>标题</header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button>OK</Button>
-        <Button>Cancel</Button>
-      </footer>
+  <template v-if="visible">
+    <div class="ark-mb-overlay"></div>
+    <div class="ark-mb-wrapper">
+      <div class="ark-mb">
+        <header>
+          标题
+          <span class="ark-mb-close"></span>
+        </header>
+        <main>
+          <p>第一行字</p>
+          <p>第二行字</p>
+        </main>
+        <footer>
+          <Button>OK</Button>
+          <Button>Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 
 <script>
+import { ref } from "vue";
 import Button from "./Button.vue";
 export default {
+  props: {
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     return {};
   },
@@ -87,7 +99,7 @@ $border-color: #d9d9d9;
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
-    &::before {
+    &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
