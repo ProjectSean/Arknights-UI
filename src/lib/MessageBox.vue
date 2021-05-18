@@ -1,21 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="ark-mb-overlay" @click="OnClickOverlay"></div>
-    <div class="ark-mb-wrapper">
-      <div class="ark-mb">
-        <header>
-          <slot name="title" />
-          <span class="ark-mb-close" @click="close"></span>
-        </header>
-        <main>
-          <slot name="content"></slot>
-        </main>
-        <footer>
-          <Button @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="ark-mb-overlay" @click="OnClickOverlay"></div>
+      <div class="ark-mb-wrapper">
+        <div class="ark-mb">
+          <header>
+            <slot name="title" />
+            <span class="ark-mb-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
