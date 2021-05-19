@@ -1,7 +1,7 @@
 <template>
   <div class="ark-tabs">
     <div class="ark-tabs-nav">
-      <div class="ark-tabs-nav-item selected" v-for="t in titles" :key="t.id">
+      <div class="ark-tabs-nav-item" v-for="t in titles" :key="t.id">
         {{ t }}
       </div>
     </div>
@@ -51,12 +51,13 @@ $border-color: #999;
     border-bottom: 1px solid #727272;
     &-item {
       position: relative;
-      // padding: 6px 0 4px;
-      width: 20%;
+      bottom: -1px;
+      width: 18%;
       border-top: 2px solid transparent;
-      margin-top: 4px;
+      margin-top: 2px;
       margin-right: 1px;
-      font-size: 14px;
+      padding: 3px 0;
+      font-size: 12px;
       text-align: center;
       &::after {
         position: absolute;
