@@ -1,24 +1,37 @@
 <template>
   <div class="ark-tabs">
     <div class="ark-tabs-nav">
-      <div class="ark-tabs-nav-item" v-for="t in titles" :key="t.id">
+      <div
+        class="ark-tabs-nav-item"
+        v-for="t in titles"
+        :key="t.id"
+        :class="{ selected: t === selected }"
+        @click="select(t)"
+      >
         {{ t }}
       </div>
     </div>
     <div class="ark-tabs-content">
-      <component
+      <!-- <component
         class="ark-tabs-content-item"
         v-for="c in defaults"
         :is="c"
         :key="c.id"
-      />
+      /> -->
+      <component class="ark-tabs-content-item" :is="currentSelected" />
     </div>
   </div>
 </template>
 
 <script>
+import { computed } from "vue";
 import Tab from "./Tab.vue";
 export default {
+  props: {
+    selected: {
+      type: String,
+    },
+  },
   setup(props, context) {
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
@@ -26,10 +39,18 @@ export default {
         throw new Error("Tabs子标签必须是Tab");
       }
     });
+    const currentSelected = computed(() => {
+      return defaults.filter((tag) => {
+        return tag.props.title === props.selected;
+      })[0];
+    });
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
-    return { titles, defaults };
+    const select = (title) => {
+      context.emit("update:selected", title);
+    };
+    return { currentSelected, titles, defaults, select };
   },
   components: {
     Tab,
@@ -59,17 +80,15 @@ $border-color: #999;
       padding: 3px 0;
       font-size: 12px;
       text-align: center;
+      cursor: pointer;
       &::after {
         position: absolute;
         top: 15%;
-        right: -2px;
+        right: -1px;
         content: "";
         width: 2px;
         height: 80%;
         background-color: $line-grey;
-      }
-      &:first-child {
-        margin-left: 0;
       }
       &:last-child {
         margin-left: 0;
@@ -78,7 +97,7 @@ $border-color: #999;
         }
       }
       &.selected {
-        border-top: 2px solid #0098dc;
+        border-top: 2.5px solid #0098dc;
         // box-shadow: ;
         background-color: #fff;
         color: $color;
