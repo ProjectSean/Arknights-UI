@@ -74,14 +74,32 @@ $border-color: #999;
     &-item {
       position: relative;
       bottom: -1px;
-      width: 18%;
-      border-top: 2px solid transparent;
-      margin-top: 2px;
+      width: 16.6%;
+      margin-top: 6px;
       margin-right: 1px;
-      padding: 3px 0;
+      padding: 3px 4px;
       font-size: 12px;
       text-align: center;
       cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      user-select: none;
+      @media (max-width: 500px) {
+        width: 20%;
+        padding: 3px 6px;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        top: -2px;
+        left: 50%;
+        width: 0;
+        height: 4.5px;
+        background: transparent;
+        transform: translateX(-50%);
+        transition: width 500ms;
+      }
       &::after {
         position: absolute;
         top: 15%;
@@ -98,10 +116,12 @@ $border-color: #999;
         }
       }
       &.selected {
-        border-top: 2.5px solid #0098dc;
-        // box-shadow: ;
         background-color: #fff;
         color: $color;
+        &::before {
+          width: 100%;
+          background: #0098dc;
+        }
         &::after {
           z-index: -1;
         }
