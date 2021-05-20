@@ -75,15 +75,14 @@ $border-color: #999;
       position: relative;
       bottom: -1px;
       width: 16.6%;
-      margin-top: 6px;
-      margin-right: 1px;
-      padding: 3px 4px;
+      margin: 5px 1px 0 0;
+      padding: 3px 5px;
       font-size: 12px;
       text-align: center;
-      cursor: pointer;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      cursor: pointer;
       user-select: none;
       @media (max-width: 500px) {
         width: 20%;
@@ -92,10 +91,10 @@ $border-color: #999;
       &::before {
         position: absolute;
         content: "";
-        top: -2px;
+        top: 0;
         left: 50%;
         width: 0;
-        height: 4.5px;
+        height: 2.5px;
         background: transparent;
         transform: translateX(-50%);
         transition: width 500ms;
@@ -110,7 +109,6 @@ $border-color: #999;
         background-color: $line-grey;
       }
       &:last-child {
-        margin-left: 0;
         &::after {
           display: none;
         }
