@@ -75,7 +75,7 @@ $border-color: #999;
       position: relative;
       bottom: -1px;
       width: 16.6%;
-      margin: 5px 1px 0 0;
+      margin: 4px 1px 0 0;
       padding: 3px 5px;
       font-size: 12px;
       text-align: center;

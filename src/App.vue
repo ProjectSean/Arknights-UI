@@ -1,4 +1,5 @@
 <template>
+  <div class="background"></div>
   <router-view />
 </template>
 
@@ -19,3 +20,13 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/image/arkui-background.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+</style>
