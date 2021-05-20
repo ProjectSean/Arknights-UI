@@ -12,13 +12,14 @@
       </div>
     </div>
     <div class="ark-tabs-content">
-      <!-- <component
+      <component
         class="ark-tabs-content-item"
+        :class="{ selected: c.props.title === selected }"
         v-for="c in defaults"
         :is="c"
         :key="c.id"
-      /> -->
-      <component class="ark-tabs-content-item" :is="currentSelected" />
+      />
+      <!-- <component class="ark-tabs-content-item" :is="currentSelected" /> -->
     </div>
   </div>
 </template>
@@ -108,8 +109,15 @@ $border-color: #999;
     }
   }
   &-content {
+    padding: 10px 15px;
     min-height: 200px;
     background-image: linear-gradient(180deg, #fff 60%, #8f8f8f);
+    &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
