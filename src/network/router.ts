@@ -3,6 +3,9 @@ import { createWebHashHistory, createRouter } from 'vue-router'
 import Home from '../views/Home.vue'
 import Doc from '../views/Doc.vue'
 
+import Intro from '../components/Intro.vue'
+import Start from '../components/Start.vue'
+import Training from '../components/Training.vue'
 import Docdemo from '../components/Docdemo.vue'
 import Switch from '../components/SwitchDemo.vue'
 import MessageBox from '../components/MessageBoxDemo.vue'
@@ -15,7 +18,25 @@ export const router = createRouter({
   routes: [
     {
       path: '/',
-      component: Home
+      component: Home,
+      children: [
+        {
+          path: '',
+          component: Intro
+        },
+        {
+          path: '/intro',
+          component: Intro
+        },
+        {
+          path: '/start',
+          component: Start
+        },
+        {
+          path: 'training',
+          component: Training
+        },
+      ]
     },
     {
       path: '/doc',

@@ -8,16 +8,16 @@
             <router-link class="ark-side-link" to="/home/intro"
               >介绍 Introduction
             </router-link>
-            <span>INTRODUCTION</span>
+            <span>INTRO</span>
           </li>
           <li>
-            <router-link class="ark-side-link" to="/home/quickstart"
+            <router-link class="ark-side-link" to="/home/start"
               >快速上手 Start</router-link
             >
             <span>Start</span>
           </li>
           <li>
-            <router-link class="ark-side-link" to="/home/use"
+            <router-link class="ark-side-link" to="/home/training"
               >使用 Training</router-link
             >
             <span>Training</span>
@@ -26,12 +26,12 @@
             <router-link class="ark-side-link" to="/doc"
               >组件 Components</router-link
             >
-            <span>Components</span>
+            <span>Compo</span>
           </li>
         </ol>
       </div>
       <div class="ark-content">
-        <router-view></router-view>
+        <router-view />
       </div>
     </div>
   </div>
@@ -51,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 .banner {
   display: flex;
+  margin-top: 53px;
   .ark-sider {
     margin-top: 15vh;
     flex-basis: 30%;
@@ -124,6 +125,14 @@ export default {
         }
       }
     }
+  }
+  .ark-content {
+    // margin: 20px;
+    margin-left: 13%;
+    margin-right: 4%;
+    flex-grow: 1;
+    background-color: #fff;
+    height: 80vh;
   }
 }
 </style>
