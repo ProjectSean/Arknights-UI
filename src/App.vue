@@ -14,8 +14,11 @@ export default {
     // 如果小于500则是移动端，值应该为500，则菜单默认不显示
     const menuVisible = ref(bwidth <= 500 ? false : true);
     provide("menuVisible", menuVisible);
+    const homeMenuVisible = ref(bwidth <= 1080 ? false : true);
+    provide("homeMenuVisible", homeMenuVisible);
     router.afterEach(() => {
       menuVisible.value = bwidth <= 500 ? false : menuVisible.value;
+      homeMenuVisible.value = bwidth <= 500 ? false : homeMenuVisible.value;
     });
   },
 };

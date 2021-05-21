@@ -2,7 +2,7 @@
   <div>
     <Topnav class="home-background" />
     <div class="banner">
-      <div class="ark-sider">
+      <aside class="ark-sider" v-if="homeMenuVisible">
         <ol>
           <li>
             <router-link class="ark-side-link" to="/home/intro"
@@ -29,7 +29,7 @@
             <span>Compo</span>
           </li>
         </ol>
-      </div>
+      </aside>
       <div class="ark-content">
         <router-view />
       </div>
@@ -39,9 +39,13 @@
 
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
+import { inject, Ref } from "vue";
 export default {
   name: "Home",
-  data() {},
+  setup() {
+    const homeMenuVisible = inject<Ref<Boolean>>("homeMenuVisible");
+    return { homeMenuVisible };
+  },
   components: {
     Topnav,
   },
@@ -51,7 +55,6 @@ export default {
 <style lang="scss" scoped>
 .home-background {
   background-image: url("../assets/image/arkui-background.jpg");
-  // background-position: 0 0;
   background-size: cover;
 }
 .banner {
@@ -137,7 +140,7 @@ export default {
     padding: 20px 15px;
     flex-grow: 1;
     background-color: #fff;
-    height: 85vh;
+    height: 90vh;
     // @media (max-width: 1080px) {
     //   width: 100vw;
     //   z-index: 100;

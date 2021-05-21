@@ -15,8 +15,10 @@ export default {
   name: "Topnav",
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible"); //将类型设置成布尔值
+    const homeMenuVisible = inject<Ref<boolean>>("homeMenuVisible"); //将类型设置成布尔值
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
+      homeMenuVisible.value = !homeMenuVisible.value;
     };
     return { toggleMenu };
   },
@@ -64,6 +66,11 @@ export default {
     > .logo {
       margin: 0 auto;
     }
+    > .toggleMenu {
+      display: inline-block;
+    }
+  }
+  @media (max-width: 1080px) {
     > .toggleMenu {
       display: inline-block;
     }
