@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Topnav />
+    <Topnav class="home-background" />
     <div class="banner">
       <div class="ark-sider">
         <ol>
@@ -49,9 +49,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home-background {
+  background-image: url("../assets/image/arkui-background.jpg");
+  // background-position: 0 0;
+  background-size: cover;
+}
 .banner {
   display: flex;
-  margin-top: 53px;
+  margin-top: 49px;
   .ark-sider {
     margin-top: 15vh;
     flex-basis: 30%;
@@ -127,12 +132,16 @@ export default {
     }
   }
   .ark-content {
-    // margin: 20px;
-    margin-left: 13%;
+    margin-left: 7%;
     margin-right: 4%;
+    padding: 20px 15px;
     flex-grow: 1;
     background-color: #fff;
-    height: 80vh;
+    height: 85vh;
+    // @media (max-width: 1080px) {
+    //   width: 100vw;
+    //   z-index: 100;
+    // }
   }
 }
 </style>

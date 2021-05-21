@@ -17,7 +17,7 @@ export const router = createRouter({
   history,
   routes: [
     {
-      path: '/',
+      path: '/home',
       component: Home,
       children: [
         {
@@ -25,11 +25,11 @@ export const router = createRouter({
           component: Intro
         },
         {
-          path: '/intro',
+          path: 'intro',
           component: Intro
         },
         {
-          path: '/start',
+          path: 'start',
           component: Start
         },
         {

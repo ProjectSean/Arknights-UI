@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>开始栏</div>
 </template>
 
 <script>
