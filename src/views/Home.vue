@@ -61,7 +61,7 @@ export default {
   display: flex;
   margin-top: 49px;
   .ark-sider {
-    margin-top: 15vh;
+    padding-top: 15vh;
     flex-basis: 30%;
     color: #9a9a9a;
     & ol {
@@ -141,10 +141,18 @@ export default {
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);
     height: 90vh;
-    // @media (max-width: 1080px) {
-    //   width: 100vw;
-    //   z-index: 100;
-    // }
+  }
+  @media (max-width: 1080px) {
+    .ark-sider {
+      padding-top: 10vh;
+      width: 100vw;
+      background-image: url("../assets/image/arkui-background.jpg");
+      height: 90vh;
+    }
+    .ark-content {
+      margin: auto 5vw;
+      z-index: -1;
+    }
   }
 }
 </style>
