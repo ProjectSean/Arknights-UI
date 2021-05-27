@@ -17,6 +17,10 @@ export const router = createRouter({
   history,
   routes: [
     {
+      path: '/',
+      redirect: 'home'
+    },
+    {
       path: '/home',
       component: Home,
       children: [

@@ -139,7 +139,7 @@ export default {
     margin-right: 4%;
     padding: 20px 15px;
     flex-grow: 1;
-    background-color: #fff;
+    background-color: rgba(51, 51, 51, 0.2);
     height: 90vh;
     // @media (max-width: 1080px) {
     //   width: 100vw;
