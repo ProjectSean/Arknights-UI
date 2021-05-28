@@ -59,7 +59,12 @@ export default {
 }
 .banner {
   display: flex;
-  margin-top: 49px;
+  margin-top: 8vh;
+  height: 92vh;
+  @media (max-width: 1080px) {
+    margin-top: 5vh;
+    height: 95vh;
+  }
   .ark-sider {
     padding-top: 15vh;
     flex-basis: 30%;
@@ -135,14 +140,19 @@ export default {
     }
   }
   .ark-content {
+    margin-top: 8vh;
     margin-left: 7%;
     margin-right: 4%;
     padding: 20px 15px;
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);
-    height: 90vh;
+    height: 85vh;
   }
   @media (max-width: 1080px) {
+    .banner {
+      margin-top: 5vh;
+      height: 95vh;
+    }
     .ark-sider {
       padding-top: 10vh;
       width: 100vw;
@@ -153,6 +163,7 @@ export default {
       width: 90vw;
       position: absolute;
       margin: auto 5vw;
+      margin-top: 8vh;
       z-index: -1;
     }
   }

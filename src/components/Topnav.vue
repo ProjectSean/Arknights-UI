@@ -1,15 +1,13 @@
 <template>
   <div class="topnav">
-    <div class="logo">
-      <svg class="icon">
-        <use xlink:href="#icon-ark1"></use>
-      </svg>
-    </div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <router-link to="/doc">文档</router-link>
+      <router-link to="/home">首页</router-link>
     </ul>
-    <span class="toggleMenu" @click="toggleMenu"></span>
+    <span class="toggleMenu" @click="toggleMenu"
+      ><svg class="icon">
+        <use xlink:href="#icon-ark1"></use></svg
+    ></span>
   </div>
 </template>
 
@@ -37,51 +35,46 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  height: 8vh;
   z-index: 10;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  > .logo {
-    display: flex;
-    justify-content: center;
-    max-width: 6em;
-    // margin-right: auto;
-
-    > svg {
-      width: 32px;
-      height: 32px;
-    }
+  @media (max-width: 1080px) {
+    height: 5vh;
   }
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
-    > li {
+    height: 100%;
+    line-height: 1.75;
+    &:hover {
+      text-decoration: none;
+    }
+    > a {
       color: #fff;
-      margin: 0 1em;
+      margin: 0 0.5em;
+      text-decoration: none;
     }
   }
   > .toggleMenu {
-    width: 24px;
-    height: 24px;
-    // background: red;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    left: 16px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    display: none;
-  }
-  @media (max-width: 500px) {
-    > .menu {
-      display: none;
+    transform: translate(-50%, -50%);
+    // display: none;
+    > svg {
+      width: 32px;
+      height: 32px;
     }
+  }
+
+  @media (max-width: 1080px) {
     > .logo {
       margin: 0 auto;
     }
-    > .toggleMenu {
-      display: inline-block;
-    }
-  }
-  @media (max-width: 1080px) {
     > .toggleMenu {
       display: inline-block;
       left: 50%;
