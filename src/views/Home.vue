@@ -44,6 +44,7 @@ export default {
   name: "Home",
   setup() {
     const homeMenuVisible = inject<Ref<Boolean>>("homeMenuVisible");
+
     return { homeMenuVisible };
   },
   components: {

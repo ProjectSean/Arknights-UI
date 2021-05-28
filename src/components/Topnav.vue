@@ -13,12 +13,14 @@
 
 <script lang="ts">
 import { inject, Ref } from "vue";
+import { router } from "../network/router";
 export default {
   name: "Topnav",
   setup() {
+    const bwidth = document.documentElement.clientWidth;
     const menuVisible = inject<Ref<boolean>>("menuVisible"); //将类型设置成布尔值
     const homeMenuVisible = inject<Ref<boolean>>("homeMenuVisible"); //将类型设置成布尔值
-    const toggleMenu = () => {
+    let toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
       homeMenuVisible.value = !homeMenuVisible.value;
     };

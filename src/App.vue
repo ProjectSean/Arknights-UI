@@ -18,7 +18,7 @@ export default {
     provide("homeMenuVisible", homeMenuVisible);
     router.afterEach(() => {
       menuVisible.value = bwidth <= 500 ? false : menuVisible.value;
-      homeMenuVisible.value = bwidth <= 500 ? false : homeMenuVisible.value;
+      homeMenuVisible.value = bwidth <= 1080 ? false : homeMenuVisible.value;
     });
   },
 };
