@@ -150,6 +150,8 @@ export default {
       height: 90vh;
     }
     .ark-content {
+      width: 90vw;
+      position: absolute;
       margin: auto 5vw;
       z-index: -1;
     }

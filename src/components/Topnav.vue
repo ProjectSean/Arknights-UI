@@ -1,6 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="logo">Logo</div>
+    <div class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-ark1"></use>
+      </svg>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -37,8 +41,15 @@ export default {
   justify-content: center;
   align-items: center;
   > .logo {
+    display: flex;
+    justify-content: center;
     max-width: 6em;
-    margin-right: auto;
+    // margin-right: auto;
+
+    > svg {
+      width: 32px;
+      height: 32px;
+    }
   }
   > .menu {
     display: flex;
@@ -52,7 +63,7 @@ export default {
   > .toggleMenu {
     width: 24px;
     height: 24px;
-    background: red;
+    // background: red;
     position: absolute;
     left: 16px;
     top: 50%;
@@ -73,6 +84,8 @@ export default {
   @media (max-width: 1080px) {
     > .toggleMenu {
       display: inline-block;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
