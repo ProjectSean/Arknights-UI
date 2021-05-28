@@ -62,8 +62,8 @@ export default {
   margin-top: 8vh;
   height: 92vh;
   @media (max-width: 1080px) {
-    margin-top: 5vh;
-    height: 95vh;
+    margin-top: 6vh;
+    height: 94vh;
   }
   .ark-sider {
     padding-top: 15vh;
@@ -140,7 +140,7 @@ export default {
     }
   }
   .ark-content {
-    margin-top: 8vh;
+    margin-top: 4vh;
     margin-left: 7%;
     margin-right: 4%;
     padding: 20px 15px;
@@ -163,7 +163,6 @@ export default {
       width: 90vw;
       position: absolute;
       margin: auto 5vw;
-      margin-top: 8vh;
       z-index: -1;
     }
   }

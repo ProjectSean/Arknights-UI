@@ -36,14 +36,17 @@ export default {
   left: 0;
   width: 100%;
   height: 8vh;
+  min-height: 80px;
   z-index: 10;
   justify-content: flex-end;
   align-items: center;
   @media (max-width: 1080px) {
-    height: 5vh;
+    height: 6vh;
+    min-height: 6vh;
   }
   > .menu {
     display: flex;
+    align-items: center;
     white-space: nowrap;
     flex-wrap: nowrap;
     height: 100%;
@@ -55,6 +58,7 @@ export default {
       color: #fff;
       margin: 0 0.5em;
       text-decoration: none;
+      font-size: 20px;
     }
   }
   > .toggleMenu {
@@ -64,7 +68,6 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    // display: none;
     > svg {
       width: 32px;
       height: 32px;
@@ -72,8 +75,8 @@ export default {
   }
 
   @media (max-width: 1080px) {
-    > .logo {
-      margin: 0 auto;
+    .menu {
+      line-height: 3vh;
     }
     > .toggleMenu {
       display: inline-block;
