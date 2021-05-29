@@ -153,6 +153,8 @@ export default {
     }
   }
   .ark-content {
+    position: relative;
+
     margin-top: 4vh;
     margin-left: 7%;
     margin-right: 4%;
@@ -161,6 +163,19 @@ export default {
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);
     height: 85vh;
+    &::after {
+      // display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/image/amiya.png");
+      background-repeat: no-repeat;
+      background-position: contain;
+      opacity: 0.15;
+    }
   }
   @media (max-width: 1080px) {
     .banner {
