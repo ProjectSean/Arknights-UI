@@ -54,6 +54,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.router-link-active {
+  padding-right: 0rem;
+  color: #fff;
+  border-image: linear-gradient(
+      to right,
+      #464646 0%,
+      #464646 60%,
+      rgba(70, 70, 70, 0) 100%
+    )
+    30 stretch;
+}
 .home-background {
   background-image: url("../assets/image/arkui-background.jpg");
   background-size: cover;
