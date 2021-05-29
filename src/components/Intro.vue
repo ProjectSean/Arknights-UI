@@ -11,7 +11,7 @@
       github.com/frankfang/xxxxxxx，历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例，运行方法见
       README.md。
     </p>
-    <p>下一节：<a href="#/doc/install">安装</a></p>
+    <p>下一节：<a href="#/home/training">安装</a></p>
   </article>
 </template>
 

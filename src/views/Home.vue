@@ -156,6 +156,7 @@ export default {
     margin-top: 4vh;
     margin-left: 7%;
     margin-right: 4%;
+    width: 40vw;
     padding: 20px 15px;
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);

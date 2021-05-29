@@ -6,7 +6,7 @@
     <p>或</p>
     <pre><code>yarn add ark-ui</code></pre>
 
-    <p>下一节：<a href="#/doc/start">开始使用</a></p>
+    <p>下一节：<a href="#/home/start">开始使用</a></p>
   </article>
 </template>
 
