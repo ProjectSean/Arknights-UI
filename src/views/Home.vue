@@ -154,7 +154,6 @@ export default {
   }
   .ark-content {
     position: relative;
-
     margin-top: 4vh;
     margin-left: 7%;
     margin-right: 4%;
@@ -164,7 +163,6 @@ export default {
     background-color: rgba(51, 51, 51, 0.2);
     height: 85vh;
     &::after {
-      // display: block;
       position: absolute;
       content: "";
       top: 0;
@@ -173,8 +171,9 @@ export default {
       height: 100%;
       background-image: url("../assets/image/amiya.png");
       background-repeat: no-repeat;
-      background-position: contain;
+      background-position: center;
       opacity: 0.15;
+      z-index: -1;
     }
   }
   @media (max-width: 1080px) {
@@ -192,7 +191,7 @@ export default {
       width: 90vw;
       position: absolute;
       margin: auto 5vw;
-      z-index: -1;
+      z-index: 1;
     }
   }
 }

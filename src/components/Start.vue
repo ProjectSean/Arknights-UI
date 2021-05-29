@@ -3,20 +3,22 @@
     <h1>开始使用</h1>
     <p>请先<a href="#/home/training">安装</a>本组件库。</p>
     <p>然后在你的代码中写入下面的代码</p>
-    <pre><code>import {Button, Tabs, Switch, Dialog} from "ark-ui"</code></pre>
+    <pre><code>import {Button, Tabs, Switch, Dialog} from "ark-ui";</code></pre>
     就可以使用我提供的组件了
     <h2>Vue 单文件组件</h2>
     <p>代码示例：</p>
     <pre>
-      <code>&lt;template&gt;
-      &lt;div&gt;&lt;Button&gt;按钮&lt;/Button&gt;&lt;/div&gt;
-      &lt;script&gt;
-      import {Button, Tabs, Switch, Dialog} from "ark-ui"
-      export default {
-        components: {Button}
-      }
-      &lt;/script&gt;
-      </code></pre>
+  <code>  
+  &lt;template&gt;
+    &lt;div&gt;&lt;Switch&gt;按钮&lt;/Switch&gt;&lt;/div&gt;
+  &lt;/template&gt;
+  &lt;script&gt;
+    import {Button, Tabs, Switch, Dialog} from "ark-ui";
+    export default {
+      components: {Switch};
+    }
+  &lt;/script&gt;
+    </code></pre>
   </article>
 </template>
 
@@ -30,14 +32,22 @@ export default {
 
 <style lang="scss" scoped>
 article {
-  & h1,
-  h2,
-  p,
-  a {
-    color: #fff;
+  color: #fff;
+  & h1 {
+    font-size: 40px;
+  }
+  & p {
+    font-size: 20px;
+    & a {
+      color: skyblue;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   & pre code {
-    user-select: auto;
+    font-size: 20px;
+    color: black;
   }
 }
 </style>

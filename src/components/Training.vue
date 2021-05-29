@@ -20,13 +20,22 @@ export default {
 
 <style lang="scss" scoped>
 article {
-  & h1,
-  p,
-  a {
-    color: #fff;
+  color: #fff;
+  & h1 {
+    font-size: 40px;
+  }
+  & p {
+    font-size: 20px;
+    & a {
+      color: skyblue;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   & pre code {
-    user-select: auto;
+    font-size: 20px;
+    color: black;
   }
 }
 </style>
