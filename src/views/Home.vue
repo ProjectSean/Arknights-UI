@@ -10,17 +10,18 @@
             </router-link>
             <span>INTRO</span>
           </li>
-          <li>
-            <router-link class="ark-side-link" to="/home/start"
-              >快速上手 Start</router-link
-            >
-            <span>Start</span>
-          </li>
+
           <li>
             <router-link class="ark-side-link" to="/home/training"
               >使用 Training</router-link
             >
             <span>Training</span>
+          </li>
+          <li>
+            <router-link class="ark-side-link" to="/home/start"
+              >快速上手 Start</router-link
+            >
+            <span>Start</span>
           </li>
           <li>
             <router-link class="ark-side-link" to="/doc"
