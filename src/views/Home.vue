@@ -80,7 +80,7 @@ export default {
   }
   .ark-sider {
     padding-top: 15vh;
-    flex-basis: 30%;
+    flex-basis: 30vw;
     color: #9a9a9a;
     & ol {
       position: relative;
@@ -155,7 +155,7 @@ export default {
   .ark-content {
     position: relative;
     margin-top: 4vh;
-    margin-left: 7%;
+    margin-left: 5vw;
     margin-right: 4%;
     width: 40vw;
     padding: 20px 15px;
