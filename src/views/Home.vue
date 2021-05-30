@@ -162,6 +162,7 @@ export default {
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);
     height: 85vh;
+    z-index: -1;
     &::after {
       position: absolute;
       content: "";
@@ -186,6 +187,7 @@ export default {
       width: 100vw;
       background-image: url("../assets/image/arkui-background.jpg");
       height: 90vh;
+      z-index: 100;
     }
     .ark-content {
       width: 90vw;
