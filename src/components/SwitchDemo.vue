@@ -6,58 +6,20 @@
   </div>
 </template>
 <script lang="ts">
-import Button from "../lib/Button.vue";
 import SwitchDemo1 from "./Switchdemo/Switchdemo1.vue";
 import SwitchDemo2 from "./Switchdemo/Switchdemo2.vue";
 import Demo from "./Demo.vue";
-import { ref } from "vue";
 export default {
   setup() {
-    const bool = ref(true);
-    return { bool, SwitchDemo1, SwitchDemo2 };
+    return { SwitchDemo1, SwitchDemo2 };
   },
   components: {
-    Button,
     Demo,
   },
 };
 </script>
-
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
 h1 {
   color: #fff;
-}
-.demo {
-  border: 1px solid $border-color;
-  margin: 16px 0 32px;
-  color: #fff;
-  > h2 {
-    font-size: 20px;
-    padding: 8px 16px;
-    border-bottom: 1px solid $border-color;
-  }
-  &-component {
-    padding: 16px;
-  }
-  &-actions {
-    padding: 8px 16px;
-    border-top: 1px dashed $border-color;
-  }
-  &-code {
-    padding: 8px 16px;
-    border-top: 1px dashed $border-color;
-    > pre {
-      line-height: 1.1;
-      font-family: Consolas, "Courier New", Courier, monospace;
-      margin: 0;
-      color: #fff;
-    }
-    > p {
-      margin-top: 5px;
-      font-style: italic;
-      font-size: 14px;
-    }
-  }
 }
 </style>
