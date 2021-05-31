@@ -16,8 +16,8 @@
 
 <script lang="ts">
 import Button from "../lib/Button.vue";
-import "prismjs";
 import { computed, ref } from "vue";
+import "prismjs";
 const Prism = (window as any).Prism;
 export default {
   props: {
@@ -74,6 +74,7 @@ h1 {
       margin-top: 5px;
       font-style: italic;
       font-size: 14px;
+      color: #fff;
     }
   }
 }

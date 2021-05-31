@@ -41,11 +41,12 @@
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
 import { inject, Ref } from "vue";
+// import "prismjs";
+// const Prism = (window as any).Prism;
 export default {
   name: "Home",
   setup() {
     const homeMenuVisible = inject<Ref<Boolean>>("homeMenuVisible");
-
     return { homeMenuVisible };
   },
   components: {

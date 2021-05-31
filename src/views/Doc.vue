@@ -69,13 +69,14 @@ export default {
   }
 }
 aside {
-  width: 300px;
+  width: 400px;
   padding: 3vw;
   position: fixed;
   top: 6vh;
   left: 0;
   height: 100%;
   color: #fff;
+  font-size: 26px;
   z-index: 10;
   > h2 {
     margin-bottom: 1.5vh;

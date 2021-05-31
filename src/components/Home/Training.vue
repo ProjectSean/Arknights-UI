@@ -5,15 +5,18 @@
     <pre><code>npm install ark-ui</code></pre>
     <p>或</p>
     <pre><code>yarn add ark-ui</code></pre>
-
     <p>下一节：<a href="#/home/start">开始使用</a></p>
   </article>
 </template>
 
 <script>
+// import { computed } from "vue";
 export default {
   setup() {
-    return {};
+    // const code1 = computed(() => {
+    //   return `npm install ark-ui`;
+    // });
+    // return { code1 };
   },
 };
 </script>
