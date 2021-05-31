@@ -47,11 +47,12 @@ h1 {
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
-  color: #fff;
+
   > h2 {
     font-size: 20px;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
+    color: #fff;
   }
   &-component {
     padding: 16px;
