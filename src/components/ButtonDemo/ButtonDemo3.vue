@@ -2,9 +2,9 @@
 <template>
   <div>
     <Button disabled>主要按钮</Button>
-    <Button theme="link" disabled>未开放</Button>
-    <Button theme="text" disabled>NO INFO</Button> <br />
+    <Button theme="link" disabled>未开放</Button> <br />
     <br />
+    <Button theme="text" disabled>NO INFO</Button>
     <Button theme="danger" disabled>普通按钮</Button>
   </div>
 </template>
