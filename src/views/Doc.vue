@@ -52,7 +52,7 @@ export default {
   > .content {
     flex-grow: 1;
     padding-top: 60px;
-    padding-left: 156px;
+    padding-left: 300px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -65,24 +65,35 @@ export default {
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding: 30px;
   }
 }
 aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px;
+  width: 300px;
+  padding: 3vw;
   position: fixed;
-  top: 0;
+  top: 6vh;
   left: 0;
-  padding-top: 70px;
   height: 100%;
+  color: #fff;
+  z-index: 10;
   > h2 {
-    margin-bottom: 4px;
+    margin-bottom: 1.5vh;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      padding: 6px 0;
+    }
+  }
+  @media (max-width: 500px) {
+    padding-top: 50px;
+    background: linear-gradient(0deg, rgb(18, 18, 18), rgb(8, 8, 8) 40%);
+    width: 100%;
+    text-align: center;
+    > ol {
+      > li {
+        padding: 2.5vw 0;
+      }
     }
   }
 }
