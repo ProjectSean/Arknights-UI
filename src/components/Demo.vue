@@ -1,24 +1,36 @@
 <template>
-  <div>
-    <h1>Switch 组件示例</h1>
-    <Demo :component="SwitchDemo1" title="常规用法" />
-    <Demo :component="SwitchDemo2" title="支持disabled" />
+  <div class="demo">
+    <h2>{{ title }}</h2>
+    <div class="demo-component">
+      <component :is="component" />
+    </div>
+    <div class="demo-actions">
+      <Button>查看代码</Button>
+    </div>
+    <div class="demo-code">
+      <pre
+        class="language-html"
+        v-html="
+          Prism.highlight(component.__sourceCode, Prism.languages.html, 'html')
+        "
+      />
+      <p>*请将引入路径修改成您自己指定的路径</p>
+    </div>
   </div>
 </template>
+
 <script lang="ts">
 import Button from "../lib/Button.vue";
-import SwitchDemo1 from "./Switchdemo/Switchdemo1.vue";
-import SwitchDemo2 from "./Switchdemo/Switchdemo2.vue";
-import Demo from "./Demo.vue";
-import { ref } from "vue";
+import "prismjs";
+const Prism = (window as any).Prism;
 export default {
-  setup() {
-    const bool = ref(true);
-    return { bool, SwitchDemo1, SwitchDemo2 };
+  props: {
+    title: String,
+    component: Object,
   },
-  components: {
-    Button,
-    Demo,
+  components: { Button },
+  setup() {
+    return { Prism };
   },
 };
 </script>
