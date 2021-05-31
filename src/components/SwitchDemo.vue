@@ -6,8 +6,8 @@
   </div>
 </template>
 <script lang="ts">
-import SwitchDemo1 from "./Switchdemo/Switchdemo1.vue";
-import SwitchDemo2 from "./Switchdemo/Switchdemo2.vue";
+import SwitchDemo1 from "./SwitchDemo/SwitchDemo1.vue";
+import SwitchDemo2 from "./SwitchDemo/SwitchDemo2.vue";
 import Demo from "./Demo.vue";
 export default {
   setup() {
