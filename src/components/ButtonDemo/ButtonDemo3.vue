@@ -1,14 +1,19 @@
+<demo>常规用法</demo>
 <template>
-  <div></div>
+  <div>
+    <Button disabled>主要按钮</Button>
+    <Button theme="link" disabled>未开放</Button>
+    <Button theme="text" disabled>NO INFO</Button> <br />
+    <br />
+    <Button theme="danger" disabled>普通按钮</Button>
+  </div>
 </template>
 
 <script>
+import Button from "../../lib/Button.vue";
 export default {
-  setup() {
-    return {};
+  components: {
+    Button,
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

@@ -1,14 +1,16 @@
+<demo>常规用法</demo>
 <template>
-  <div></div>
+  <Button>确认</Button>
+  <Button theme="link">跳转</Button>
+  <Button theme="text">文字按钮</Button>
+  <Button theme="danger">确认</Button>
 </template>
 
 <script>
+import Button from "../../lib/Button.vue";
 export default {
-  setup() {
-    return {};
+  components: {
+    Button,
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
