@@ -3,9 +3,8 @@
     <h1>Switch 组件示例</h1>
     <div class="demo">
       <h2>常规用法</h2>
-
       <div class="demo-component">
-        <SwitchDemo1 />
+        <component :is="SwitchDemo1" />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -17,7 +16,7 @@
     <div class="demo">
       <h2>支持 disabled</h2>
       <div class="demo-component">
-        <SwitchDemo2 />
+        <component :is="SwitchDemo2" />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -31,7 +30,6 @@
 
 <script lang="ts">
 import { ref } from "vue";
-import Switch from "../lib/Switch.vue";
 import Button from "../lib/Button.vue";
 import SwitchDemo1 from "./Switchdemo/Switchdemo1.vue";
 import SwitchDemo2 from "./Switchdemo/Switchdemo2.vue";
@@ -41,9 +39,6 @@ export default {
     return { bool, SwitchDemo1, SwitchDemo2 };
   },
   components: {
-    Switch,
-    SwitchDemo1,
-    SwitchDemo2,
     Button,
   },
 };
