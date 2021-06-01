@@ -41,8 +41,6 @@
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
 import { inject, Ref } from "vue";
-// import "prismjs";
-// const Prism = (window as any).Prism;
 export default {
   name: "Home",
   setup() {
@@ -163,7 +161,6 @@ export default {
     flex-grow: 1;
     background-color: rgba(51, 51, 51, 0.2);
     height: 85vh;
-    z-index: -1;
     &::after {
       position: absolute;
       content: "";
