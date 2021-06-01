@@ -43,6 +43,7 @@ export default {
   justify-content: flex-end;
   align-items: center;
   background-image: url("../assets/image/arkui-background.jpg");
+  background-size: 100%;
   @media (max-width: 1080px) {
     height: 6vh;
     min-height: 6vh;

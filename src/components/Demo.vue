@@ -4,9 +4,7 @@
     <div class="demo-component">
       <component :is="component" />
     </div>
-    <div class="demo-actions">
-      <Button @click="codeVisible = !codeVisible">查看代码</Button>
-    </div>
+    <div class="demo-actions" @click="codeVisible = !codeVisible">显示代码</div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
       <p>*请将引入路径修改成您自己指定的路径</p>
@@ -47,7 +45,7 @@ h1 {
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
-
+  min-width: 300px;
   > h2 {
     font-size: 20px;
     padding: 8px 16px;
@@ -60,6 +58,9 @@ h1 {
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
   }
   &-code {
     padding: 8px 16px;
