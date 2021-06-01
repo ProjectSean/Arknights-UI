@@ -77,7 +77,7 @@ aside {
   width: 450px;
   padding: 3vw;
   position: fixed;
-  top: 6vh;
+  top: 80px;
   left: 0;
   height: 100%;
   color: #fff;
