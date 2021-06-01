@@ -73,10 +73,10 @@ export default {
 }
 .banner {
   display: flex;
-  margin-top: 8vh;
+  margin-top: 80px;
   height: 92vh;
   @media (max-width: 1080px) {
-    margin-top: 6vh;
+    margin-top: 80px;
     height: 94vh;
   }
   .ark-sider {

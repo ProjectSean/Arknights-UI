@@ -50,6 +50,7 @@ export default {
     flex-shrink: 0;
   }
   > .content {
+    margin-top: 80px;
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 450px;

@@ -37,7 +37,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 8vh;
+  height: 80px;
   min-height: 80px;
   z-index: 10;
   justify-content: flex-end;
@@ -45,8 +45,7 @@ export default {
   background-image: url("../assets/image/arkui-background.jpg");
   background-size: 100%;
   @media (max-width: 1080px) {
-    height: 6vh;
-    max-height: 80px;
+    height: 80px;
   }
   > .menu {
     display: flex;
