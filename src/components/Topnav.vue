@@ -46,7 +46,7 @@ export default {
   background-size: 100%;
   @media (max-width: 1080px) {
     height: 6vh;
-    min-height: 6vh;
+    max-height: 80px;
   }
   > .menu {
     display: flex;
