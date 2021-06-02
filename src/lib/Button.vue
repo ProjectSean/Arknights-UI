@@ -22,7 +22,7 @@
       <div class="ark-cube-spin ark-cube-spin1"></div>
       <div class="ark-cube-spin ark-cube-spin2"></div>
       <div class="ark-cube-spin ark-cube-spin4"></div>
-      <div class="ark-cube-spin ark-cube-spin3"></div>
+      <!-- <div class="ark-cube-spin ark-cube-spin3"></div> -->
     </div>
     <div><slot /></div>
     <span v-if="disabled" class="ark-span-diabled"></span>
@@ -113,7 +113,6 @@ button.ark-button {
   font-size: 16px;
   & + & {
     margin-left: 16px;
-    // margin-bottom: 16px;
   }
   &:focus {
     outline: none;
