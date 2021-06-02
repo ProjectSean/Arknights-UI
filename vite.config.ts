@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
+import { resolveComponent } from '@vue/runtime-core'
 export default {
   base: './',
   assetsDir: 'assets',

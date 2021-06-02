@@ -4,7 +4,16 @@
     <div class="demo-component">
       <component :is="component" />
     </div>
-    <div class="demo-actions" @click="codeVisible = !codeVisible">显示代码</div>
+    <div
+      class="demo-actions"
+      @click="codeVisible = !codeVisible"
+      v-if="!codeVisible"
+    >
+      显示代码
+    </div>
+    <div class="demo-actions" @click="codeVisible = !codeVisible" v-else>
+      隐藏代码
+    </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
       <p>*请将引入路径修改成您自己指定的路径</p>
@@ -13,7 +22,6 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Button.vue";
 import { computed, ref } from "vue";
 import "prismjs";
 const Prism = (window as any).Prism;
@@ -22,7 +30,6 @@ export default {
     title: String,
     component: Object,
   },
-  components: { Button },
   setup(props) {
     const html = computed(() => {
       return Prism.highlight(
